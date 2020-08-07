@@ -28,7 +28,7 @@ nav .logo img {
 }
 .dancing-char {
   position: fixed;
-  bottom: 0;
+  bottom: -2px;
   right: 50px;
 }
 .dancing-char img {
