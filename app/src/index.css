@@ -7,6 +7,9 @@ body {
   margin: 0;
   background: #faf4eb;
 }
+main {
+  padding: 4rem;
+}
 nav {
   display: flex;
   padding: 0.4rem 1rem;
@@ -25,6 +28,10 @@ nav .logo span {
 }
 nav .logo img {
   margin-right: 1rem;
+}
+.home-page h1 {
+  font-family: Romance Fatal;
+  letter-spacing: 4px;
 }
 .dancing-char {
   position: fixed;
