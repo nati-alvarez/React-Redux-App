@@ -1,4 +1,5 @@
 import React, {useEffect} from "react";
+import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 
 import {getTopAnime} from "../../actions";
@@ -27,10 +28,12 @@ const TopAnime = props => {
                     {props.topAnimeLoading && <span>Loading</span>}
                     {props.topAnime.map(show=>{
                         return (
-                            <div key={show.mal_id} className="anime">
-                                <img src={show.image_url}/>
-                                <h3>{show.title}</h3>
-                            </div>
+                            <Link to={`/anime/${show.title}`}>
+                                <div key={show.mal_id} className="anime">
+                                    <img src={show.image_url}/>
+                                    <h3>{show.title}</h3>
+                                </div>
+                            </Link>
                         )
                     })}
                 </section>

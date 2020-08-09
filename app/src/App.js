@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 import Nav from "./components/Nav";
 import Home from "./components/Home";
+import Show from "./components/Show";
 
 import dancingChar from "./images/dancing_char.gif";
 
@@ -15,6 +16,9 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Home/>
+            </Route>
+            <Route exact path='/anime/:name'>
+              <Show/>
             </Route>
           </Switch>
         </main>
