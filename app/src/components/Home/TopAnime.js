@@ -28,7 +28,7 @@ const TopAnime = props => {
                     {props.topAnimeLoading && <span>Loading</span>}
                     {props.topAnime.map(show=>{
                         return (
-                            <Link to={`/anime/${show.title}`}>
+                            <Link to={`/anime/${show.mal_id}`}>
                                 <div key={show.mal_id} className="anime">
                                     <img src={show.image_url}/>
                                     <h3>{show.title}</h3>

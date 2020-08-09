@@ -68,6 +68,49 @@ nav .logo img {
   width: 100%;
   height: 300px;
 }
+.show-page h1,
+.show-page h2 {
+  margin: 0;
+  font-family: Romance Fatal;
+  letter-spacing: 2px;
+}
+.show-page .show {
+  background: white;
+  padding: 1rem;
+}
+.show-page header {
+  display: flex;
+  align-items: center;
+}
+.show-page header .info {
+  padding-left: 2rem;
+}
+.show-page header .rating {
+  font-size: 1.6rem;
+}
+.show-page header .rating span {
+  font-weight: bold;
+}
+.show-page header .rating .green {
+  color: mediumseagreen;
+}
+.show-page header .rating .red {
+  color: crimson;
+}
+.show-page header p {
+  line-height: 1.4rem;
+}
+.show-page .trailer {
+  margin-top: 4rem;
+  text-align: center;
+}
+.show-page .trailer iframe {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 800px;
+  height: 40vw;
+  max-height: 450px;
+}
 .dancing-char {
   position: fixed;
   bottom: -2px;

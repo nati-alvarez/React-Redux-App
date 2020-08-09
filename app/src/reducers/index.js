@@ -1,4 +1,7 @@
-import {GET_TOP_ANIME_START, GET_TOP_ANIME_SUCCESS} from "../actions";
+import {
+    GET_TOP_ANIME_START, GET_TOP_ANIME_SUCCESS,
+    GET_ANIME_START, GET_ANIME_SUCCESS
+} from "../actions";
 
 const initialState = {
     anime: null,
@@ -19,6 +22,11 @@ export const reducer = (state = initialState, action) =>{
                 ...state,
                 topAnimeLoading: false,
                 topAnime: action.payload
+            }
+        case GET_ANIME_SUCCESS:
+            return {
+                ...state,
+                anime: action.payload
             }
         default:
             return state;
