@@ -100,9 +100,15 @@ nav .logo img {
 .show-page header p {
   line-height: 1.4rem;
 }
-.show-page .trailer {
+.show-page section {
+  display: flex;
   margin-top: 4rem;
-  text-align: center;
+}
+.show-page .episodes {
+  flex: 1;
+}
+.show-page .trailer {
+  flex: 2;
 }
 .show-page .trailer iframe {
   margin-top: 2rem;
