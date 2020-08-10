@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import {connect} from "react-redux";
 
-import {getAnime, getAnimeEps} from "../../actions";
+import {getAnime, getAnimeEps, clearAnime} from "../../actions";
 
 import Trailer from "./Trailer";
 import Episodes from "./Episodes";  
@@ -14,6 +14,8 @@ const Show = props =>{
     useEffect(()=>{
         props.getAnime(id);
         props.getAnimeEps(id);
+
+        return props.clearAnime();
     }, [])
 
     useEffect(()=>{
@@ -77,4 +79,4 @@ const mapStateToProps = state =>{
     }
 }
 
-export default connect(mapStateToProps, {getAnime, getAnimeEps})(Show);
+export default connect(mapStateToProps, {getAnime, getAnimeEps, clearAnime})(Show);

@@ -5,9 +5,11 @@ export const GET_TOP_ANIME_SUCCESS = "GET_TOP_ANIME_SUCCESS";
 
 export const GET_ANIME_START = "GET_ANIME_START";
 export const GET_ANIME_SUCCESS = "GET_ANIME_SUCCESS";
+export const CLEAR_ANIME = "CLEAR_ANIME";
 
 export const GET_ANIME_EPS_START = "GET_ANIME_EPS_START";
 export const GET_ANIME_EPS_SUCCESS = "GET_ANIME_EPS_SUCCESS";
+
 
 export const getTopAnime = () => dispatch =>{
     dispatch({type: GET_TOP_ANIME_START});
@@ -25,7 +27,11 @@ export const getAnime = id => dispatch => {
     }).catch(err=>{
         console.log(err);
     });
-}  
+}
+
+export const clearAnime = () => dispatch =>{
+    dispatch({type: CLEAR_ANIME});
+}
 
 export const getAnimeEps = id => dispatch => {
     dispatch({type: GET_ANIME_EPS_START});
