@@ -21,6 +21,8 @@ nav .logo {
   align-items: center;
   justify-content: center;
   font-size: 1.6rem;
+  text-decoration: none;
+  color: inherit;
 }
 nav .logo span {
   font-weight: bold;
