@@ -45,16 +45,23 @@ const Show = props =>{
                     <section>
                         <div className="main-content">
                             {props.anime.trailer_url && <Trailer trailer_url={props.anime.trailer_url}/>}
-                            <p>
+                            <div>
                                 <address>Aired {props.anime.aired.string}</address>
-                            </p>
+                            </div>
                             <div className="genre">
                                 <p>
                                     <b>Genre:</b> {props.anime.genres.map(genre=> genre.name + ", ")}
                                 </p>
                             </div>
                             <div className="songs">
-                                <p><b>Openings:</b> {props.anime.opening_themes.map(song=> song)}</p>
+                                <p><b>Openings:</b> {props.anime.opening_themes.map(song=>{
+                                    return (
+                                        <>
+                                            {song}
+                                            <br/>
+                                        </>
+                                    )
+                                })}</p>
                                 <p><b>Endings:</b> {props.anime.ending_themes.map(song=> {
                                     return (
                                         <>
