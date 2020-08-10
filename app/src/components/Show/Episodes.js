@@ -6,9 +6,9 @@ const Episodes = props => {
             <h2>Episodes</h2>
             {props.episodes.map(ep => {
                 return (
-                    <div className="episodes">
+                    <aside className="episodes">
                         <p><strong style={{paddingRight: "10px"}}>{ep.episode_id}</strong> {ep.title}</p>
-                    </div>
+                    </aside>
                 )
             })}
         </div>

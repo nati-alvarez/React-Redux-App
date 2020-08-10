@@ -4,6 +4,7 @@ import {connect} from "react-redux";
 
 import {getAnime, getAnimeEps} from "../../actions";
 
+import Trailer from "./Trailer";
 import Episodes from "./Episodes";  
 
 const Show = props =>{
@@ -39,9 +40,8 @@ const Show = props =>{
                         </div>
                     </header>
                     <section>
-                        <div className="trailer">
-                            <h2>Trailer</h2>
-                            <iframe allowFullScreen src={props.anime.trailer_url + "?autoplay=0"}></iframe>
+                        <div>
+                        {   props.anime.trailer_url && <Trailer trailer_url={props.anime.trailer_url}/>}
                         </div>
                         <Episodes episodes={props.anime.episodes}/>
                     </section>
