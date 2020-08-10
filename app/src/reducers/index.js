@@ -1,6 +1,6 @@
 import {
     GET_TOP_ANIME_START, GET_TOP_ANIME_SUCCESS,
-    GET_ANIME_START, GET_ANIME_SUCCESS
+    GET_ANIME_START, GET_ANIME_SUCCESS, GET_ANIME_EPS_SUCCESS
 } from "../actions";
 
 const initialState = {
@@ -26,7 +26,19 @@ export const reducer = (state = initialState, action) =>{
         case GET_ANIME_SUCCESS:
             return {
                 ...state,
-                anime: action.payload
+                anime: {
+                    ...action.payload,
+                    episodes: []
+                }
+            }
+        case GET_ANIME_EPS_SUCCESS:
+            console.log(action)
+            return {
+                ...state,
+                anime: {
+                    ...state.anime,
+                    episodes: action.payload.episodes
+                }
             }
         default:
             return state;
