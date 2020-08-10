@@ -18,6 +18,13 @@
         }
 
         .rating {
+            display: block;
+            color: dimgray;
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+
+        .score {
             font-size: 1.6rem;
 
             span {
@@ -30,6 +37,10 @@
 
             .red {
                 color: crimson;
+            }
+
+            .favorites {
+                color: darken(#f0bdd5, 10%);
             }
         }
 
@@ -47,9 +58,11 @@
         flex: 1;
     }
 
-    .trailer {
-        flex: 2;
+    .main-content {
+        flex: 3;
+    }
 
+    .trailer {
         iframe {
             margin-top: 2rem;
             width: 100%;

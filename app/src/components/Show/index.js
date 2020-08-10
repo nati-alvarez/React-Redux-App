@@ -8,7 +8,7 @@ import Trailer from "./Trailer";
 import Episodes from "./Episodes";  
 
 const Show = props =>{
-    const [ratingColor, setRatingColor] = useState("");
+    const [scoreColor, setScoreColor] = useState("");
     const {id} = useParams();
 
     useEffect(()=>{
@@ -17,11 +17,10 @@ const Show = props =>{
     }, [])
 
     useEffect(()=>{
-        console.log(props.anime)
         if(props.anime && props.anime.score > 6){
-            setRatingColor("green");
+            setScoreColor("green");
         }else if (props.anime && props.anime.score < 4){
-            setRatingColor("red");
+            setScoreColor("red");
         }
     }, [props.anime])
 
@@ -33,17 +32,38 @@ const Show = props =>{
                         <img src={props.anime.image_url}/>
                         <div className="info">
                             <h1>{props.anime.title}</h1>
-                            <p className="rating">
-                                Rating <span className={ratingColor}>{props.anime.score}</span>
+                            <small className="rating">{props.anime.rating}</small>
+                            <p className="score">
+                                Score <span className={scoreColor}>{props.anime.score}&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                Favorites <span className="favorites">{props.anime.favorites}</span>
                             </p>
                             <p className="synopsis">{props.anime.synopsis}</p>
                         </div>
                     </header>
                     <section>
-                        <div>
-                        {   props.anime.trailer_url && <Trailer trailer_url={props.anime.trailer_url}/>}
+                        <div className="main-content">
+                            {props.anime.trailer_url && <Trailer trailer_url={props.anime.trailer_url}/>}
+                            <p>
+                                <address>Aired {props.anime.aired.string}</address>
+                            </p>
+                            <div className="genre">
+                                <p>
+                                    <b>Genre:</b> {props.anime.genres.map(genre=> genre.name + ", ")}
+                                </p>
+                            </div>
+                            <div className="songs">
+                                <p><b>Openings:</b> {props.anime.opening_themes.map(song=> song)}</p>
+                                <p><b>Endings:</b> {props.anime.ending_themes.map(song=> {
+                                    return (
+                                        <>
+                                            {song}
+                                            <br/>
+                                        </>
+                                    )
+                                })}</p>
+                            </div>
                         </div>
-                        <Episodes episodes={props.anime.episodes}/>
+                        {props.anime.episodes[0] && <Episodes episodes={props.anime.episodes}/>}
                     </section>
                 </div>
             }

@@ -86,16 +86,25 @@ nav .logo img {
   padding-left: 2rem;
 }
 .show-page header .rating {
+  display: block;
+  color: dimgray;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+.show-page header .score {
   font-size: 1.6rem;
 }
-.show-page header .rating span {
+.show-page header .score span {
   font-weight: bold;
 }
-.show-page header .rating .green {
+.show-page header .score .green {
   color: mediumseagreen;
 }
-.show-page header .rating .red {
+.show-page header .score .red {
   color: crimson;
+}
+.show-page header .score .favorites {
+  color: #e793bb;
 }
 .show-page header p {
   line-height: 1.4rem;
@@ -107,8 +116,8 @@ nav .logo img {
 .show-page .episodes {
   flex: 1;
 }
-.show-page .trailer {
-  flex: 2;
+.show-page .main-content {
+  flex: 3;
 }
 .show-page .trailer iframe {
   margin-top: 2rem;

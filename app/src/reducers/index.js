@@ -32,7 +32,6 @@ export const reducer = (state = initialState, action) =>{
                 }
             }
         case GET_ANIME_EPS_SUCCESS:
-            console.log(action)
             return {
                 ...state,
                 anime: {

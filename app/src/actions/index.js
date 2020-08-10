@@ -19,9 +19,8 @@ export const getTopAnime = () => dispatch =>{
 }
 
 export const getAnime = id => dispatch => {
-    dispatch({type: GET_ANIME_SUCCESS});
+    dispatch({type: GET_ANIME_START});
     axios.get(`https://api.jikan.moe/v3/anime/${id}`).then(({data})=>{
-        console.log(data);
         dispatch({type: GET_ANIME_SUCCESS, payload: data});
     }).catch(err=>{
         console.log(err);
@@ -31,7 +30,6 @@ export const getAnime = id => dispatch => {
 export const getAnimeEps = id => dispatch => {
     dispatch({type: GET_ANIME_EPS_START});
     axios.get(`https://api.jikan.moe/v3/anime/${id}/episodes`).then(({data})=>{
-        console.log(data);
         dispatch({type: GET_ANIME_EPS_SUCCESS, payload: data});
     }).catch(err=>{
         console.log(err);
