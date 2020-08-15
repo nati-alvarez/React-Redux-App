@@ -31,6 +31,10 @@ nav .logo span {
 nav .logo img {
   margin-right: 1rem;
 }
+.home-page {
+  margin: 0 auto;
+  max-width: 1200px;
+}
 .home-page h1 {
   font-family: Romance Fatal;
   letter-spacing: 4px;
