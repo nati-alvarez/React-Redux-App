@@ -31,6 +31,27 @@ nav .logo span {
 nav .logo img {
   margin-right: 1rem;
 }
+.search-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.search-form label {
+  flex: 4;
+}
+.search-form input {
+  width: 100%;
+  padding: 0.4rem 1rem;
+  border: 1px solid #e793bb;
+}
+.search-form button {
+  border: 1px solid #f0bdd5;
+  background: #f0bdd5;
+  color: white;
+  font-weight: bold;
+}
 .home-page {
   margin: 0 auto;
   max-width: 1200px;

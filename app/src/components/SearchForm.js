@@ -14,7 +14,7 @@ const SearchForm = props => {
     return (
         <form className="search-form" onSubmit={handleSubmit}>
             <label htmlFor="query">
-                <input name="query" type="text" value={formData.query} onChange={handleChange}/>
+                <input name="query" type="text" placeholder="Looking for something?" value={formData.query} onChange={handleChange}/>
             </label>
             <button>Submit</button>
         </form>
