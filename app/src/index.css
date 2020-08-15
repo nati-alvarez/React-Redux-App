@@ -52,6 +52,25 @@ nav .logo img {
   color: white;
   font-weight: bold;
 }
+.anime-card {
+  background: white;
+  padding: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+.anime-card .image-container {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  min-height: 400px;
+  max-height: 400px;
+  display: flex;
+  align-items: center;
+}
+.anime-card .image-container img {
+  width: 100%;
+  max-height: 400px;
+}
 .home-page {
   margin: 0 auto;
   max-width: 1200px;
@@ -152,6 +171,17 @@ nav .logo img {
   max-width: 800px;
   height: 40vw;
   max-height: 450px;
+}
+.search-results .results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.search-results .results .anime-card {
+  width: 23%;
+  margin: 0 1%;
+  box-sizing: border-box;
+  margin-bottom: 2vh;
 }
 .dancing-char {
   position: fixed;

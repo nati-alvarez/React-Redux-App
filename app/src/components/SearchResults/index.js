@@ -25,7 +25,7 @@ const SearchResults = props => {
     return (
         <main className="search-results">
             <SearchForm/>
-            <p>Search results for "{query}:"</p>
+            <h2>Search results for "{query}:"</h2>
             <Results results={props.searchResults}/>
         </main>
     )

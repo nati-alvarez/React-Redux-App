@@ -1,14 +1,13 @@
 import React from "react";
 
+import AnimeCard from "./AnimeCard";
+
 const Results = props => {
     return (
         <div className="results">
             {props.results.map(anime=>{
                 return (
-                    <div className="anime">
-                    <p>{anime.title}</p>
-                    <img src={anime.image_url}/>
-                    </div>
+                    <AnimeCard anime={anime}/>
                 )
             })}
         </div>
