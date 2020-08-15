@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import {useLocation} from "react-router-dom";
 import {connect} from "react-redux";
 
-import {makeSearch} from "../../actions";
+import {makeSearch, clearSearchResults} from "../../actions";
 
 import SearchForm from "../SearchForm";
 import Results from "./Results";
@@ -12,8 +12,13 @@ const SearchResults = props => {
     const query = new URLSearchParams(search).get("query");
 
     useEffect(()=>{
+        props.clearSearchResults();
+    }, [])
+
+    useEffect(()=>{
         props.makeSearch(query);
-    }, []);
+    }, [query]);
+    
 
     console.log(props.searchResults);
 
@@ -21,7 +26,7 @@ const SearchResults = props => {
         <main className="search-results">
             <SearchForm/>
             <p>Search results for "{query}:"</p>
-            <Results/>
+            <Results results={props.searchResults}/>
         </main>
     )
 }
@@ -32,4 +37,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, {makeSearch})(SearchResults);
+export default connect(mapStateToProps, {makeSearch, clearSearchResults})(SearchResults);

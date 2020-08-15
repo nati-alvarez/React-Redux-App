@@ -12,6 +12,7 @@ export const GET_ANIME_EPS_SUCCESS = "GET_ANIME_EPS_SUCCESS";
 
 export const GET_SEARCH_RESULTS_START = "GET_SEARCH_RESULTS_START";
 export const GET_SEARCH_RESULTS_SUCCESS = 'GET_SEARCH_RESULTS_SUCCESS';
+export const CLEAR_SEARCH_RESULTS = "CLEAR_SEARCH_RESULTS";
 
 export const getTopAnime = () => dispatch =>{
     dispatch({type: GET_TOP_ANIME_START});
@@ -51,4 +52,8 @@ export const makeSearch = query => dispatch => {
     }).catch(err=>{
         console.log(err);
     })
+}
+
+export const clearSearchResults = () => dispatch => {
+    return dispatch({type: CLEAR_SEARCH_RESULTS});
 }

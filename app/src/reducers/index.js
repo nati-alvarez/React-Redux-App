@@ -1,6 +1,8 @@
 import {
     GET_TOP_ANIME_START, GET_TOP_ANIME_SUCCESS,
-    GET_ANIME_START, GET_ANIME_SUCCESS, CLEAR_ANIME, GET_ANIME_EPS_SUCCESS, GET_SEARCH_RESULTS_SUCCESS
+    GET_ANIME_START, GET_ANIME_SUCCESS, CLEAR_ANIME, 
+    GET_ANIME_EPS_SUCCESS, 
+    GET_SEARCH_RESULTS_SUCCESS, CLEAR_SEARCH_RESULTS
 } from "../actions";
 
 const initialState = {
@@ -49,6 +51,11 @@ export const reducer = (state = initialState, action) =>{
             return {
                 ...state,
                 searchResults: action.payload
+            }
+        case CLEAR_SEARCH_RESULTS:
+            return {
+                ...state,
+                searchResults: []
             }
         default:
             return state;
