@@ -12,11 +12,11 @@ const SearchForm = props => {
     }
     
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="search-form" onSubmit={handleSubmit}>
             <label htmlFor="query">
                 <input name="query" type="text" value={formData.query} onChange={handleChange}/>
-                <button>Submit</button>
             </label>
+            <button>Submit</button>
         </form>
     )
 }
