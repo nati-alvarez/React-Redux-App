@@ -54,20 +54,20 @@ const Show = props =>{
                                 </p>
                             </div>
                             <div className="songs">
-                                <p><b>Openings:</b> {props.anime.opening_themes.map(song=>{
+                                <p><b>Openings:</b> {props.anime.opening_themes.map((song, key)=>{
                                     return (
-                                        <>
-                                            {song}
+                                        <React.Fragment key={key}>
+                                            <span>{song}</span>
                                             <br/>
-                                        </>
+                                        </React.Fragment>
                                     )
                                 })}</p>
-                                <p><b>Endings:</b> {props.anime.ending_themes.map(song=> {
+                                <p><b>Endings:</b> {props.anime.ending_themes.map((song, key)=> {
                                     return (
-                                        <>
-                                            {song}
+                                        <React.Fragment key={key}>
+                                            <span>{song}</span>
                                             <br/>
-                                        </>
+                                        </React.Fragment>
                                     )
                                 })}</p>
                             </div>
