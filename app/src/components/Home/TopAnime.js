@@ -10,8 +10,11 @@ const TopAnime = props => {
     }, []);
 
     const scrollRight = () =>{
+        let scrollCorrection = (window.clientWidth <= 600)? 1: 0;
+        console.log(scrollCorrection)
         const topAnimeElement = document.querySelector(".top-anime");
-        topAnimeElement.scrollLeft += topAnimeElement.clientWidth;
+        topAnimeElement.scrollLeft += topAnimeElement.clientWidth + scrollCorrection;
+        console.log(topAnimeElement.scrollLeft)
     }
 
     const scrollLeft = () =>{
