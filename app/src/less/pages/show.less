@@ -10,14 +10,29 @@
     .show {
         background: white;
         padding: 1rem;
-    
+        @media (max-width: 800px){
+            padding: 10px;
+        }
     }
     header {
         display: flex;
         align-items: center;
 
+        @media (max-width: 800px){
+            display: block;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 4vh;
+        }
+
         .info {
             padding-left: 2rem;
+            @media (max-width: 800px){
+                padding: 0px;
+            }
         }
 
         .rating {
@@ -32,6 +47,10 @@
 
             span {
                 font-weight: bold;
+                @media (max-width: 360px){
+                   display: block;
+                   margin: 1vh 0 2vh 0;
+                }
             }
 
             .green {
@@ -54,7 +73,11 @@
     
     section {
         display: flex;
+        flex-wrap: wrap;
         margin-top: 4rem;
+        @media (max-width: 1000px) {
+            display: block;
+        }
     }
 
     .episodes {
@@ -68,10 +91,15 @@
     .trailer {
         iframe {
             margin-top: 2rem;
-            width: 100%;
+            width: 90%;
             max-width: 800px;
             height: 40vw;
             max-height: 450px;
+
+            @media (max-width: 800px){
+                width: 100%;
+                height: 45vw;
+            }
         }
 
     }

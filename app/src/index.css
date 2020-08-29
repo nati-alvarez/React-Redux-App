@@ -147,12 +147,32 @@ nav .logo img {
   background: white;
   padding: 1rem;
 }
+@media (max-width: 800px) {
+  .show-page .show {
+    padding: 10px;
+  }
+}
 .show-page header {
   display: flex;
   align-items: center;
 }
+@media (max-width: 800px) {
+  .show-page header {
+    display: block;
+  }
+}
+.show-page header img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 4vh;
+}
 .show-page header .info {
   padding-left: 2rem;
+}
+@media (max-width: 800px) {
+  .show-page header .info {
+    padding: 0px;
+  }
 }
 .show-page header .rating {
   display: block;
@@ -165,6 +185,12 @@ nav .logo img {
 }
 .show-page header .score span {
   font-weight: bold;
+}
+@media (max-width: 360px) {
+  .show-page header .score span {
+    display: block;
+    margin: 1vh 0 2vh 0;
+  }
 }
 .show-page header .score .green {
   color: mediumseagreen;
@@ -180,7 +206,13 @@ nav .logo img {
 }
 .show-page section {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 4rem;
+}
+@media (max-width: 1000px) {
+  .show-page section {
+    display: block;
+  }
 }
 .show-page .episodes {
   flex: 1;
@@ -190,14 +222,30 @@ nav .logo img {
 }
 .show-page .trailer iframe {
   margin-top: 2rem;
-  width: 100%;
+  width: 90%;
   max-width: 800px;
   height: 40vw;
   max-height: 450px;
 }
+@media (max-width: 800px) {
+  .show-page .trailer iframe {
+    width: 100%;
+    height: 45vw;
+  }
+}
 .search-results {
   max-width: 1200px;
   margin: 0 auto;
+}
+@media (max-width: 1100px) {
+  .search-results {
+    padding: 4rem 2rem;
+  }
+}
+@media (max-width: 900px) {
+  .search-results {
+    padding: 4rem 1rem;
+  }
 }
 .search-results .results {
   display: flex;
@@ -205,10 +253,28 @@ nav .logo img {
   justify-content: flex-start;
 }
 .search-results .results .anime-card {
+  max-width: 300px;
   width: 23%;
   margin: 0 1%;
   box-sizing: border-box;
   margin-bottom: 2vh;
+}
+@media (max-width: 1100px) {
+  .search-results .results .anime-card {
+    width: 31.3333%;
+  }
+}
+@media (max-width: 900px) {
+  .search-results .results .anime-card {
+    width: 48%;
+  }
+}
+@media (max-width: 500px) {
+  .search-results .results .anime-card {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 2vh;
+  }
 }
 .dancing-char {
   position: fixed;
