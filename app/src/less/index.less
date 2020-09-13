@@ -1,0 +1,24 @@
+@import "vars";
+@import "base";
+
+@import "components/nav";
+@import "components/search-form";
+@import "components/anime-card";
+
+@import "pages/home";
+@import "pages/show";
+@import "pages/search-results";
+
+.dancing-char {
+    position: fixed;
+    bottom: -2px;
+    right: 20px;
+
+    @media (max-width: 600px) {
+        display: none;
+    }
+
+    img {
+        height: 200px;
+    }
+}

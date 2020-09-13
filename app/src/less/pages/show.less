@@ -1,0 +1,106 @@
+.show-page {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h1, h2 {
+        margin: 0;
+        font-family: Romance Fatal;
+        letter-spacing: 2px;
+    }
+    .show {
+        background: white;
+        padding: 1rem;
+        @media (max-width: 800px){
+            padding: 10px;
+        }
+    }
+    header {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 800px){
+            display: block;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 4vh;
+        }
+
+        .info {
+            padding-left: 2rem;
+            @media (max-width: 800px){
+                padding: 0px;
+            }
+        }
+
+        .rating {
+            display: block;
+            color: dimgray;
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+
+        .score {
+            font-size: 1.6rem;
+
+            span {
+                font-weight: bold;
+                @media (max-width: 360px){
+                   display: block;
+                   margin: 1vh 0 2vh 0;
+                }
+            }
+
+            .green {
+                color: mediumseagreen;
+            }
+
+            .red {
+                color: crimson;
+            }
+
+            .favorites {
+                color: darken(#f0bdd5, 10%);
+            }
+        }
+
+        p {
+            line-height: 1.4rem;
+        }
+    }
+    
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 4rem;
+        @media (max-width: 1000px) {
+            display: block;
+        }
+    }
+
+    .episodes {
+        flex: 1;
+    }
+
+    .main-content {
+        flex: 3;
+    }
+
+    .trailer {
+        iframe {
+            margin-top: 2rem;
+            width: 90%;
+            max-width: 800px;
+            height: 40vw;
+            max-height: 450px;
+
+            @media (max-width: 800px){
+                width: 100%;
+                height: 45vw;
+            }
+        }
+
+    }
+}

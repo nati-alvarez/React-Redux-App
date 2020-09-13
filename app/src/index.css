@@ -1,0 +1,291 @@
+@font-face {
+  font-family: "Romance Fatal";
+  src: url("/fonts/romance_fatal_serif.ttf");
+}
+body {
+  padding: 0;
+  margin: 0;
+  background: #faf4eb;
+}
+main {
+  padding: 4rem;
+}
+nav {
+  display: flex;
+  padding: 0.4rem 1rem;
+  background: white;
+  font-family: Romance Fatal;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: inherit;
+}
+nav .logo span {
+  font-weight: bold;
+  color: #e793bb;
+}
+nav .logo img {
+  margin-right: 1rem;
+}
+.search-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.search-form label {
+  flex: 4;
+}
+.search-form input {
+  width: 100%;
+  padding: 0.4rem 1rem;
+  border: 1px solid #e793bb;
+}
+.search-form button {
+  border: 1px solid #f0bdd5;
+  background: #f0bdd5;
+  color: white;
+  font-weight: bold;
+}
+.anime-card {
+  background: white;
+  padding: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+.anime-card .image-container {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  min-height: 400px;
+  max-height: 400px;
+  display: flex;
+  align-items: center;
+}
+.anime-card .image-container img {
+  width: 100%;
+  max-height: 400px;
+}
+.home-page {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.home-page h1 {
+  font-family: Romance Fatal;
+  letter-spacing: 4px;
+}
+.home-page .carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.home-page .carousel > button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  font-weight: bold;
+  font-size: 2rem;
+  background: #f0bdd5;
+  color: white;
+}
+.home-page .top-anime {
+  display: flex;
+  width: 89%;
+  overflow-x: hidden;
+}
+.home-page .top-anime a {
+  box-sizing: border-box;
+  width: 22%;
+  min-width: 22%;
+  background: white;
+  padding: 10px;
+  margin: 0 1.5%;
+  color: inherit;
+  text-decoration: none;
+}
+.home-page .top-anime .anime img {
+  width: 100%;
+  height: 300px;
+}
+@media (max-width: 1000px) {
+  .home-page .top-anime a {
+    width: 30.3%;
+    min-width: 30.3%;
+  }
+}
+@media (max-width: 600px) {
+  main {
+    padding: 2vh 5vw;
+  }
+  .home-page .top-anime {
+    margin: 0 2vw;
+  }
+  .home-page .top-anime a {
+    width: 100%;
+    min-width: 100%;
+    margin: 0;
+  }
+}
+.show-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.show-page h1,
+.show-page h2 {
+  margin: 0;
+  font-family: Romance Fatal;
+  letter-spacing: 2px;
+}
+.show-page .show {
+  background: white;
+  padding: 1rem;
+}
+@media (max-width: 800px) {
+  .show-page .show {
+    padding: 10px;
+  }
+}
+.show-page header {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  .show-page header {
+    display: block;
+  }
+}
+.show-page header img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 4vh;
+}
+.show-page header .info {
+  padding-left: 2rem;
+}
+@media (max-width: 800px) {
+  .show-page header .info {
+    padding: 0px;
+  }
+}
+.show-page header .rating {
+  display: block;
+  color: dimgray;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+.show-page header .score {
+  font-size: 1.6rem;
+}
+.show-page header .score span {
+  font-weight: bold;
+}
+@media (max-width: 360px) {
+  .show-page header .score span {
+    display: block;
+    margin: 1vh 0 2vh 0;
+  }
+}
+.show-page header .score .green {
+  color: mediumseagreen;
+}
+.show-page header .score .red {
+  color: crimson;
+}
+.show-page header .score .favorites {
+  color: #e793bb;
+}
+.show-page header p {
+  line-height: 1.4rem;
+}
+.show-page section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+}
+@media (max-width: 1000px) {
+  .show-page section {
+    display: block;
+  }
+}
+.show-page .episodes {
+  flex: 1;
+}
+.show-page .main-content {
+  flex: 3;
+}
+.show-page .trailer iframe {
+  margin-top: 2rem;
+  width: 90%;
+  max-width: 800px;
+  height: 40vw;
+  max-height: 450px;
+}
+@media (max-width: 800px) {
+  .show-page .trailer iframe {
+    width: 100%;
+    height: 45vw;
+  }
+}
+.search-results {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 1100px) {
+  .search-results {
+    padding: 4rem 2rem;
+  }
+}
+@media (max-width: 900px) {
+  .search-results {
+    padding: 4rem 1rem;
+  }
+}
+.search-results .results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.search-results .results .anime-card {
+  max-width: 300px;
+  width: 23%;
+  margin: 0 1%;
+  box-sizing: border-box;
+  margin-bottom: 2vh;
+}
+@media (max-width: 1100px) {
+  .search-results .results .anime-card {
+    width: 31.3333%;
+  }
+}
+@media (max-width: 900px) {
+  .search-results .results .anime-card {
+    width: 48%;
+  }
+}
+@media (max-width: 500px) {
+  .search-results .results .anime-card {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 2vh;
+  }
+}
+.dancing-char {
+  position: fixed;
+  bottom: -2px;
+  right: 20px;
+}
+@media (max-width: 600px) {
+  .dancing-char {
+    display: none;
+  }
+}
+.dancing-char img {
+  height: 200px;
+}
